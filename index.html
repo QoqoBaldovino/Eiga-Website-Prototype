@@ -4,13 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/png" href="assets/icons/icon.png">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Eiga | Tus videos favoritos en un solo lugar!</title>
 </head>
 <body>
   <header>
-
+    <div class="header__container container">
+      <figure class="header__image-container">
+        <a href="index.html"><img class="header__image" src="assets/images/logofinal.png" alt="Logo de Eiga"></a>
+      </figure>
+      <div class="header__menu">
+        <div class="header__profile">
+          <img src="assets/icons/user-icon.png" alt="Imagen de Perfil">
+          <p>Perfil</p>
+        </div>
+        <ul class="header__menu-items">
+          <li><a href="#">Cuenta</a></li>
+          <li><a href="#">Cerrar Sesion</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
+  <main>
+    <section class="search__container container">
+        <h2>¿Qué quieres ver hoy?</h2>
+        <input type="text" placeholder="Buscar...">
+    </section>
+  </main>
 </body>
 </html>

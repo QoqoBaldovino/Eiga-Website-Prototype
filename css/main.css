@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+  --purple-eiga: #52057B;
+  --purple2-eiga: #892cdc;
+  --purple3-eiga: #BC6FF1;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Andika New Basic', sans-serif;
+}
+
+.container{
+  padding: 0 5%;
+}
+
+/*HEADER*/
+
+header{
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color: black
+}
+
+header .header__container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header__image{
+  width: 150px;
+}
+
+header .header__profile{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .header__profile img{
+  height: 50px;
+}
+
+header .header__profile p{
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+header .header__menu-items{
+  display: none;
+  margin: 0 0 0 -14px;
+  padding: 15px;
+  background-color: white;
+  position: absolute;
+  border: 1px solid black;
+}
+
+header .header__menu:hover .header__menu-items{
+  display: block;
+}
+
+header .header__menu-items li{
+  padding: 5px 0;
+  list-style-type: none;
+}
+
+header .header__menu-items li a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+}
+
+header .header__menu-items li a:hover{
+  text-decoration: underline;
+}
+
+/*MAIN - SEARCH*/
+main{
+  background-color: var(--purple2-eiga);
+}
+
+main .search__container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  text-align: center; 
+}
+
+main .search__container h2{
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: 50px;
+}
+
+main .search__container input{
+  height: 45px;
+  width: 90%;
+  border-radius: 25px;
+  padding: 25px;
+  font-size: 1.5em;
+  outline: none;
+}
