@@ -111,3 +111,292 @@ main .search__container input{
   font-size: 1.5em;
   outline: none;
 }
+
+/*Carrousel*/
+
+main .carrousel{
+  overflow: scroll;
+  position: relative;
+}
+
+main .carrousel__container{
+  white-space: nowrap;
+  margin: 70px 0;
+  padding-bottom: 10px;
+}
+
+main .carrousel__item{
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  background-color: var(--purple-eiga);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  
+  transition: 450ms;
+  outline: none;
+}
+
+/*Se desplazan los demas items cuando hacemos hover en un Item*/
+main .carrousel__item:hover ~ .carrousel__item{
+  transform: translate3d(50px,0,0);
+}
+
+/*En el hover de los items se ponen todos grises*/
+main .carrousel__container:hover .carrousel__item{
+  opacity: 0.3;
+}
+
+/*Exceptuamos el item que seleccionamos y le ponemos la opacidad al maximo*/
+main .carrousel__container:hover .carrousel__item:hover{
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+/*Posicionamos absolutamente los detalles para que cuando seleccionemos una foto aparezca encima de la misma*/
+main .carrousel__item-details{
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%,  rgba(0,0,0,0) 100%);
+  font-size: 0.6em;
+  opacity: 0;
+  padding: 10px;
+  position:absolute;
+  /*top:0*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main .carrousel__item-details--icons img{
+  width: 20px;
+  cursor: pointer;
+}
+
+main .carrousel__item-details p{
+  color: white;
+}
+
+main .carrousel__item-img{
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
+
+}
+
+/*Cuando hacemos hover en la foto aparece los detalles*/
+main .carrousel__item:hover .carrousel__item-details{   
+    opacity: 1;
+}
+
+
+/*!Login*/
+
+.login{
+  background: linear-gradient(--purple2-eiga,--purple3-eiga);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  min-height: calc(100vh - 150px);
+  
+}
+
+/*
+  --purple-eiga: #52057B;
+  --purple2-eiga: #892cdc;
+  --purple3-eiga: #BC6FF1;
+}*/
+
+.login__container{
+  
+  justify-content: flex-start;
+  border: 2px solid white;
+  border-radius: 40px;
+  padding: 60px 68px 40px;
+  color: white;
+  min-height: 700px;
+  width: 400px;
+  box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.4);
+}
+
+.login__container h2{
+  padding: 30px 0 50px 0;
+}
+
+.login__container--form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login__container--form input{
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: white;
+}
+
+.login__container--form input::placeholder{
+  color: white;
+}
+
+
+.login__container--form input:focus{
+  outline: none;
+}
+
+
+.login__container--form button{
+  margin: 10px 0;
+  padding: 10px 0;
+  border-radius: 20px;
+  border:none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.login__container--form button:active{
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  outline: none;
+  border:none
+}
+
+.login__container--form button:focus{
+  outline: none;
+}
+
+.login__container--remember-me{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.login__container--remember-me label{
+  padding-bottom: 2.5px;
+}
+
+.login__container--remember-me a{
+  color: white;
+  text-decoration: none;
+}
+
+.login__container--remember-me a:hover{
+  text-decoration: underline;
+}
+
+.login__container--social-media{
+  padding: 50px 0;
+}
+
+.login__container--social-media figure{
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+
+.login__container--social-media figure a{
+  font-size: 0.85em;
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.login__container--social-media figure a:hover{
+  text-decoration: underline;
+}
+
+
+
+.login__container--register a{
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.login__container--register a:hover{
+  text-decoration: underline;
+}
+
+/*Footer*/
+footer{
+  display: flex;
+  background-color: black;
+  height: 90px;
+  align-items: center;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+  padding-left: 50px;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+/**************************************************/
+
+@media screen and (max-width:768px){
+
+  footer{
+    justify-content: center;
+    
+  }
+
+  footer a{
+    padding: 30px;
+  }
+
+}
+
+
+@media screen and (max-width:768px){
+
+  footer{
+    justify-content: center;
+    
+  }
+
+  footer a{
+    padding: 30px;
+  }
+
+}
+
+
+@media screen and (max-width:480px){
+
+
+  /* LOGIN */
+
+
+  .login__container{
+    border-radius: 0px;
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+
+  }
+
+  /* FOOTER */
+  footer{
+    height: 115px;
+    
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer a{
+    padding: 0;
+    font-size: 0.9em;
+  }
+
+
+}
