@@ -1,57 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
   --purple-eiga: #52057B;
   --purple2-eiga: #892cdc;
   --purple3-eiga: #BC6FF1;
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Andika New Basic", sans-serif;
+  font-family: 'Andika New Basic', sans-serif;
 }
 
-.container {
+.container{
   padding: 0 5%;
 }
 
 /*HEADER*/
-header {
+
+header{
   display: flex;
   align-items: center;
   height: 90px;
-  background-color: black;
+  background-color: black
 }
 
-header .header__container {
+header .header__container{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header .header__image {
+header .header__image{
   width: 150px;
 }
 
-header .header__profile {
+header .header__profile{
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-header .header__profile img {
+header .header__profile img{
   height: 50px;
 }
 
-header .header__profile p {
+header .header__profile p{
   color: white;
   padding: 10px;
   font-weight: bold;
 }
 
-header .header__menu-items {
+header .header__menu-items{
   display: none;
   margin: 0 0 0 -14px;
   padding: 15px;
@@ -60,46 +62,48 @@ header .header__menu-items {
   border: 1px solid black;
 }
 
-header .header__menu:hover .header__menu-items {
+header .header__menu:hover .header__menu-items{
   display: block;
 }
 
-header .header__menu-items li {
+header .header__menu-items li{
   padding: 5px 0;
   list-style-type: none;
 }
 
-header .header__menu-items li a {
+header .header__menu-items li a{
   text-decoration: none;
   color: black;
   font-weight: bold;
+
 }
 
-header .header__menu-items li a:hover {
+header .header__menu-items li a:hover{
   text-decoration: underline;
 }
 
 /*MAIN - SEARCH*/
-main {
+main{
   background-color: var(--purple2-eiga);
 }
 
-main .search__container {
+main .search__container
+{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
-  text-align: center;
+  text-align: center; 
 }
 
-main .search__container h2 {
+main .search__container h2{
   color: white;
   font-size: 2.5em;
   padding-bottom: 50px;
 }
 
-main .search__container input {
+main .search__container input{
   height: 45px;
   width: 90%;
   border-radius: 25px;
@@ -109,24 +113,25 @@ main .search__container input {
 }
 
 /*Carrousel*/
-main .carrousel {
+
+main .carrousel{
   overflow: scroll;
   overflow-y: hidden;
   position: relative;
 }
 
-main .carrousel__title {
+main .carrousel__title{
   color: white;
   font-size: 1.5em;
 }
 
-main .carrousel__container {
+main .carrousel__container{
   white-space: nowrap;
   margin: 70px 0;
   padding-bottom: 10px;
 }
 
-main .carrousel__item {
+main .carrousel__item{
   display: inline-block;
   width: 200px;
   height: 250px;
@@ -134,68 +139,72 @@ main .carrousel__item {
   border-radius: 20px;
   overflow: hidden;
   margin-right: 10px;
-  box-shadow: 3px 3px 10px #3f3f3f;
+  box-shadow: 3px 3px 10px rgb(63, 63, 63);
   transition: 450ms;
   outline: none;
 }
 
 /*Se desplazan los demas items cuando hacemos hover en un Item*/
-main .carrousel__item:hover ~ .carrousel__item {
-  transform: translate3d(50px, 0, 0);
+main .carrousel__item:hover ~ .carrousel__item{
+  transform: translate3d(50px,0,0);
 }
 
 /*En el hover de los items se ponen todos grises*/
-main .carrousel__container:hover .carrousel__item {
+main .carrousel__container:hover .carrousel__item{
   opacity: 0.3;
 }
 
 /*Exceptuamos el item que seleccionamos y le ponemos la opacidad al maximo*/
-main .carrousel__container:hover .carrousel__item:hover {
+main .carrousel__container:hover .carrousel__item:hover{
   transform: scale(1.5);
   opacity: 1;
 }
 
 /*Posicionamos absolutamente los detalles para que cuando seleccionemos una foto aparezca encima de la misma*/
-main .carrousel__item-details {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+main .carrousel__item-details{
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%,  rgba(0,0,0,0) 100%);
   font-size: 0.6em;
   opacity: 0;
   padding: 10px;
-  position: absolute;
+  position:absolute;
   /*top:0*/
   left: 0;
   right: 0;
   bottom: 0;
 }
 
-main .carrousel__item-details--icons img {
+main .carrousel__item-details--icons img{
   width: 20px;
   cursor: pointer;
 }
 
-main .carrousel__item-details p {
+main .carrousel__item-details p{
   color: white;
 }
 
-main .carrousel__item-img {
+main .carrousel__item-img{
   height: 250px;
   width: 200px;
   object-fit: cover;
+
 }
 
 /*Cuando hacemos hover en la foto aparece los detalles*/
-main .carrousel__item:hover .carrousel__item-details {
-  opacity: 1;
+main .carrousel__item:hover .carrousel__item-details{   
+    opacity: 1;
 }
 
+
 /*!Login*/
-.login {
-  background: linear-gradient(--purple2-eiga, --purple3-eiga);
+
+.login{
+  background: linear-gradient(--purple2-eiga,--purple3-eiga);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px 0;
   min-height: calc(100vh - 150px);
+  
 }
 
 /*
@@ -203,7 +212,9 @@ main .carrousel__item:hover .carrousel__item-details {
   --purple2-eiga: #892cdc;
   --purple3-eiga: #BC6FF1;
 }*/
-.login__container {
+
+.login__container{
+  
   justify-content: flex-start;
   border: 2px solid white;
   border-radius: 40px;
@@ -214,16 +225,16 @@ main .carrousel__item:hover .carrousel__item-details {
   box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.4);
 }
 
-.login__container h2 {
+.login__container h2{
   padding: 30px 0 50px 0;
 }
 
-.login__container--form {
+.login__container--form{
   display: flex;
   flex-direction: column;
 }
 
-.login__container--form input {
+.login__container--form input{
   border: none;
   border-bottom: 2px solid white;
   background-color: rgba(255, 255, 255, 0);
@@ -232,105 +243,112 @@ main .carrousel__item:hover .carrousel__item-details {
   color: white;
 }
 
-.login__container--form input::placeholder {
+.login__container--form input::placeholder{
   color: white;
 }
 
-.login__container--form input:focus {
+
+.login__container--form input:focus{
   outline: none;
 }
 
-.login__container--form button {
+
+.login__container--form button{
   margin: 10px 0;
   padding: 10px 0;
   border-radius: 20px;
-  border: none;
+  border:none;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
 }
 
-.login__container--form button:active {
-  background-color: white;
+.login__container--form button:active{
+  background-color: rgba(255, 255, 255, 1);
   color: black;
   outline: none;
-  border: none;
+  border:none
 }
 
-.login__container--form button:focus {
+.login__container--form button:focus{
   outline: none;
 }
 
-.login__container--remember-me {
+.login__container--remember-me{
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8em;
 }
 
-.login__container--remember-me label {
+.login__container--remember-me label{
   padding-bottom: 2.5px;
 }
 
-.login__container--remember-me a {
+.login__container--remember-me a{
   color: white;
   text-decoration: none;
 }
 
-.login__container--remember-me a:hover {
+.login__container--remember-me a:hover{
   text-decoration: underline;
 }
 
-.login__container--social-media {
+.login__container--social-media{
   padding: 50px 0;
 }
 
-.login__container--social-media figure {
+.login__container--social-media figure{
   display: flex;
   align-items: center;
   padding: 5px 0;
 }
 
-.login__container--social-media figure a {
+
+.login__container--social-media figure a{
   font-size: 0.85em;
   margin-left: 10px;
   color: white;
   text-decoration: none;
 }
 
-.login__container--social-media figure a:hover {
+.login__container--social-media figure a:hover{
   text-decoration: underline;
 }
 
-.login__container--register a {
+
+
+.login__container--register a{
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
 
-.login__container--register a:hover {
+.login__container--register a:hover{
   text-decoration: underline;
 }
 
 /*ERROR*/
-.error {
+
+.error{
   min-height: calc(100vh - 150px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.error__container {
+.error__container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.error__container h2 {
+.error__container h2{
   font-size: 7em;
   color: white;
 }
 
-.error__container p {
+
+.error__container p{
   font-size: 2em;
   color: white;
 }
@@ -342,91 +360,94 @@ main .carrousel__item:hover .carrousel__item-details {
 }
 
 @keyframes wobble {
-  0% {
-    transform: translateX(0%);
-  }
-  15% {
-    transform: translateX(-25%) rotate(-5deg);
-  }
-  30% {
-    transform: translateX(20%) rotate(3deg);
-  }
-  45% {
-    transform: translateX(-15%) rotate(-3deg);
-  }
-  60% {
-    transform: translateX(10%) rotate(2deg);
-  }
-  75% {
-    transform: translateX(-5%) rotate(-1deg);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+  0% {transform: translateX(0%);}
+  15% {transform: translateX(-25%) rotate(-5deg);}
+  30% {transform: translateX(20%) rotate(3deg);}
+  45% {transform: translateX(-15%) rotate(-3deg);}
+  60% {transform: translateX(10%) rotate(2deg);}
+  75% {transform: translateX(-5%) rotate(-1deg);}
+  100% {transform: translateX(0%);}
 }
 .wobble {
   animation-name: wobble;
 }
 
 /*Footer*/
-footer {
+footer{
   display: flex;
   background-color: black;
   height: 90px;
   align-items: center;
 }
 
-footer a {
+footer a{
   color: white;
   text-decoration: none;
   padding-left: 50px;
 }
 
-footer a:hover {
+footer a:hover{
   text-decoration: underline;
 }
 
 /**************************************************/
-@media screen and (max-width: 768px) {
-  footer {
+
+@media screen and (max-width:768px){
+
+  footer{
     justify-content: center;
+    
   }
 
-  footer a {
+  footer a{
     padding: 30px;
-  }
-}
-@media screen and (max-width: 768px) {
-  footer {
-    justify-content: center;
   }
 
-  footer a {
+}
+
+
+@media screen and (max-width:768px){
+
+  footer{
+    justify-content: center;
+    
+  }
+
+  footer a{
     padding: 30px;
   }
+
 }
-@media screen and (max-width: 480px) {
+
+
+@media screen and (max-width:480px){
+
+
   /* LOGIN */
-  .login__container {
+
+
+  .login__container{
     border-radius: 0px;
     background: transparent;
     border: none;
     height: 100%;
     width: 100%;
     box-shadow: none;
+
   }
 
   /* FOOTER */
-  footer {
+  footer{
     height: 115px;
+    
     flex-direction: column;
     align-items: center;
   }
 
-  footer a {
+  footer a{
     padding: 0;
     font-size: 0.9em;
   }
-}
 
-/*# sourceMappingURL=main.css.map */
+
+}
