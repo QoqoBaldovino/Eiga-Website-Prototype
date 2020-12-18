@@ -116,7 +116,13 @@ main .search__container input{
 
 main .carrousel{
   overflow: scroll;
+  overflow-y: hidden;
   position: relative;
+}
+
+main .carrousel__title{
+  color: white;
+  font-size: 1.5em;
 }
 
 main .carrousel__container{
