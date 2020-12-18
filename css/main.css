@@ -387,15 +387,7 @@ footer a:hover {
 }
 
 /**************************************************/
-@media screen and (max-width: 768px) {
-  footer {
-    justify-content: center;
-  }
 
-  footer a {
-    padding: 30px;
-  }
-}
 @media screen and (max-width: 768px) {
   footer {
     justify-content: center;
@@ -407,6 +399,11 @@ footer a:hover {
 }
 @media screen and (max-width: 480px) {
   /* LOGIN */
+  main .search__container h2 {
+    font-size: 1.8em;
+  }
+  
+
   .login__container {
     border-radius: 0px;
     background: transparent;
@@ -414,6 +411,14 @@ footer a:hover {
     height: 100%;
     width: 100%;
     box-shadow: none;
+  }
+
+  .error__container h2{
+    font-size: 3em;
+  }
+
+  .error__container p{
+    font-size: 1.5em;
   }
 
   /* FOOTER */
